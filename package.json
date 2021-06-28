@@ -1,0 +1,43 @@
+{
+  "name": "backened",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "engine":{
+    "node":"12.18.3",
+    "npm":"6.14.6"
+  },
+
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "braintree": "^2.2.0",
+    "concurrently": "^6.2.0",
+    "cookie-parser": "^1.4.4",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-jwt": "^5.3.1",
+    "express-validator": "^6.2.0",
+    "formidable": "^1.2.1",
+    "i": "^0.3.6",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.15",
+    "mongoose": "^5.7.7",
+    "morgan": "^1.9.1",
+    "nodemailer": "^6.6.1",
+    "nodemon": "^2.0.6",
+    "npm": "^6.13.0",
+    "stripe": "^8.114.0",
+    "uuid": "^3.3.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node app.js",
+    "backend":"nodemon app.js",
+    "frontend":"cd projfrontened && npm start",
+    "dev":"concurrently \"npm install --prefix frontened\" \"npm run start --prefix frontened\"",
+    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm install --prefix frontened && npm run build --prefix frontened"
+  },
+  "author": "yuvraj",
+  "license": "ISC"
+}
